@@ -1,0 +1,219 @@
+/*-------------------------------------------
+	共通部分
+  -------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/*-------------------------------------------
+  ページ全体
+  -------------------------------------------*/
+.page-wrapper {
+  width: 100%;
+  padding: 0 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+/*-------------------------------------------
+  メインコンテンツ
+  -------------------------------------------*/
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+/*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+}
+
+.header-logo {
+  height: 24px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header ul {
+  display: flex;
+  gap: 24px;
+}
+
+.header li a:hover {
+  opacity: 0.7;
+}
+  /*-------------------------------------------
+  メインビジュアル
+  -------------------------------------------*/
+.main-visual-wrapper {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* 画像を表示する要素 */
+.main-visual {
+  width: 100%;
+  height: 100%;
+}
+
+.main-visual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+/* テキストを重ねて表示 */
+.main-visual-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4); /* 背景を半透明にして読みやすく */
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+}
+
+.main-visual-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.main-visual-text p {
+  font-size: 1.1rem;
+}
+  /*-------------------------------------------
+  セクション 共通部分
+  -------------------------------------------*/
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.section-title {
+  border-bottom: solid 1px #383e45;
+}
+  /* -------------------------------------------
+  プロフィール
+  -------------------------------------------*/
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+  /*-------------------------------------------
+  資格
+  -------------------------------------------*/
+
+.certification {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: stretch; /* 高さを揃える */
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.certification-card {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ホバーでふわっと浮く */
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.certification-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+  /*-------------------------------------------
+  フッター
+  -------------------------------------------*/
+.footer {
+  font-size: small;
+  padding: 40px 0;
+  text-align: center;
+}
+
+  /*-------------------------------------------
+  ページトップに戻るボタン
+  -------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+  opacity: 0.8;
+  transform: translateY(-4px);
+}
